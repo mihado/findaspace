@@ -1,6 +1,8 @@
 Findaspace::Application.routes.draw do
   devise_for :admins
 
+  resources :bookingreqs
+
   get "home/index"
 
   resources :spaces do 

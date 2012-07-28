@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Email:</b>
+  <%= @bookingreq.email %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @bookingreq.username %>
+</p>
+
+<p>
+  <b>Space:</b>
+  <%= @bookingreq.space_id %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @bookingreq.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @bookingreq.end_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_bookingreq_path(@bookingreq) %> |
+<%= link_to 'Back', bookingreqs_path %>
