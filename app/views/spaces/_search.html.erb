@@ -2,7 +2,9 @@
   Search for a space
   <% @search_space ||= Space.new %>
   <%= form_for @search_space, :url => [:search, :spaces] do |f| %>
+  
     <div id="locationfield" class='field'>
+      <label for="locationfield">region</label>
       <%= select_city_for_space(f) %>
     </div>
 

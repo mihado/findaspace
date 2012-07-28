@@ -1,4 +1,6 @@
 Findaspace::Application.routes.draw do
+  resources :bookingreqs
+
   get "home/index"
 
   resources :spaces do 

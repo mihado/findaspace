@@ -4,9 +4,35 @@ float: left;
 padding: 6px 0;
 }
 
-body {
+/*body {
 background-position-y: -257px;
 background-image: url('bizdojo.jpg');
+}*/
+
+#space_city {
+position: absolute;
+width: 240px;
+padding-left: 10px;
+top: 7px;
+border: none;
+border-collapse: collapse;
+font-size: 12px;
+background-color: transparent;
+outline: none;
+}
+
+#locationfield label {
+width: 55px;
+padding: 20px;
+}
+
+#locationfield {
+background-color: white;
+display: block;
+width: 320px;
+height: 32px;
+overflow: visible;
+position: relative;
 }
 
 .hero-unit {

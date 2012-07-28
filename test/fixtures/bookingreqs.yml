@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  username: MyString
+  space_id: 1
+  start_time: 2012-07-28 23:12:12
+  end_time: 2012-07-28 23:12:12
+
+two:
+  email: MyString
+  username: MyString
+  space_id: 1
+  start_time: 2012-07-28 23:12:12
+  end_time: 2012-07-28 23:12:12

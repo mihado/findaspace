@@ -1,6 +1,5 @@
 <div id="space_list" >
     <h1>Listing all spaces</h1>
-    <%= render 'spaces/search' %>
     <table>
         <% @spaces.each do |space| %>
         <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
@@ -70,3 +69,5 @@
 <br />
 
 <%= link_to 'New Space', new_space_path %>
+
+<%= link_to 'Booking Request', new_bookingreq_path %>

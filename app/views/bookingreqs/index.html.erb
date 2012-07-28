@@ -1,0 +1,31 @@
+<h1>Listing bookingreqs</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Username</th>
+    <th>Space</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bookingreqs.each do |bookingreq| %>
+  <tr>
+    <td><%= bookingreq.email %></td>
+    <td><%= bookingreq.username %></td>
+    <td><%= bookingreq.space_id %></td>
+    <td><%= bookingreq.start_time %></td>
+    <td><%= bookingreq.end_time %></td>
+    <td><%= link_to 'Show', bookingreq %></td>
+    <td><%= link_to 'Edit', edit_bookingreq_path(bookingreq) %></td>
+    <td><%= link_to 'Destroy', bookingreq, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bookingreq', new_bookingreq_path %>
