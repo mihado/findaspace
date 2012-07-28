@@ -18,7 +18,7 @@
                 <%= link_to 'Show', space %><br/>
                 <%= link_to 'Edit', edit_space_path(space) %><br/>
                 <%= link_to 'Destroy', space,
-                :confirm => 'Are you sure?',
+                  :data => {:confirm => 'Are you sure?'},
                 :method => :delete %>
             </td>
         </tr>
