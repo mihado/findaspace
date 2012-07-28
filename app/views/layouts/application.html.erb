@@ -36,9 +36,9 @@
             <div class="nav-collapse">
               <ul class="nav">
                 <li class="active"><%= link_to 'Search', root_path %></li>
-                <li><a href="#how">How does it work?</a></li>
-                <li><a href="#signup">Signup as a venue</a></li>
-                <li><a href="#signup">Signup as a finder</a></li>
+                <li class="active"><%= link_to 'How does it work?', pages_how_path %></li>
+                <li class="active"><%= link_to 'Signup as a venue', pages_venue_path %></li>
+                <li class="active"><%= link_to 'Signup as a finder', pages_user_path %></li>
                 <li>
                 <% if admin_signed_in? %>
                   <%= link_to 'Logout', destroy_admin_session_path, :method => 'delete' %>

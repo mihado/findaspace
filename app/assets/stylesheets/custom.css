@@ -1,32 +1,50 @@
-option {
-background-color: white;
-float: left;
-padding: 6px 0;
-}
-
 /*body {
 background-position-y: -257px;
 background-image: url('bizdojo.jpg');
 }*/
 
-#space_city {
+#space_city, #space_capacity_range{
 position: absolute;
 width: 240px;
 padding-left: 10px;
-top: 7px;
+top: 0;
 border: none;
 border-collapse: collapse;
-font-size: 12px;
 background-color: transparent;
 outline: none;
+margin: 2px;
 }
 
-#locationfield label {
+
+
+#locationfield select, #capacityfield select {
+font-size: 16px;
+color: black;
+}
+
+#space_city option, #space_capacity_range option{
+font-size: 14px;
+padding: 4px 0 0 0;
+color: black;
+}
+
+#locationfield label, #space_capacity_range label {
 width: 55px;
-padding: 20px;
+padding: 7px 0 0 10px;
+font-size: 16px;
+color: #666;
 }
 
 #locationfield {
+background-color: white;
+display: block;
+width: 320px;
+height: 32px;
+overflow: visible;
+position: relative;
+}
+
+#capacityfield {
 background-color: white;
 display: block;
 width: 320px;
