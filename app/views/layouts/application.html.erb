@@ -2,14 +2,51 @@
 <html>
 <head>
   <title>Findaspace</title>
+  <!--
+      <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+-->
+	<%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+	<%= stylesheet_link_tag    "bootstrap-responsive", :media => "all" %>
+	<%= stylesheet_link_tag    "bootstrap-datepicker", :media => "all" %>
+	<%= stylesheet_link_tag    "custom", :media => "all" %>
+
+	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<%= javascript_include_tag "jquery" %>
+	<%= javascript_include_tag "bootstrap-datepicker" %>
+	<%= javascript_include_tag "bootstrap-dropdown" %>
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= stylesheet_link_tag    "test", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container-fluid">
+            <a class="brand" href="#">Findaspace</a>
+            <div class="nav-collapse">
+              <ul class="nav">
+                <li class="active"><a href="#">Search</a></li>
+                <li><a href="#how">How does it work?</a></li>
+                <li><a href="#signup">Signup as a venue</a></li>
+                <li><a href="#signup">Signup as a finder</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
 
 <%= yield %>
+
 
 </body>
 </html>

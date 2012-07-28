@@ -1,0 +1,77 @@
+option {
+background-color: white;
+float: left;
+padding: 6px 0;
+}
+
+body {
+background-position-y: -257px;
+background-image: url('bizdojo.jpg');
+}
+
+.hero-unit {
+background-color: transparent; 
+}
+
+#results {
+  display:none;
+}
+
+.footer-fixed-bottom {
+margin-right: -20px;
+margin-left: -20px;
+}
+
+input.nomargin {
+margin-bottom: 0;
+padding: 0;
+}
+
+.raised {
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+  padding: 19px;
+  min-height: 20px;
+  border: 1px solid #eee;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow:  0 1px 1px rgba(0, 0, 0, 0.05);
+  
+}
+
+.wellsearch{
+
+margin: 0 20px;
+
+}
+
+.btn-group {
+vertical-align: top;
+}
+
+.raised .btn-group .dropdown-toggle {
+height: 47px;
+line-height:47px;
+}
+
+.raised .btn-group .dropdown-toggle .caret {
+margin: 23px 0 0 0;
+}
+
+.findaspace {
+height: 47px;
+margin: 0px 0 0 10px;
+line-height: 47px;
+}
+
+.raised {
+margin-left: -20px;
+}
+
+.container-fluid {
+padding: 0px;
+}

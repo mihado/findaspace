@@ -33,7 +33,8 @@
   </div>
   <div class="field">
     <%= f.label :capacity %><br />
-    <%= f.number_field :capacity %>
+    <%#= f.number_field :capacity %>
+    <%= select_capacity_of_space(f) %>
   </div>
   <div class="field">
     <%= f.label :price %><br />
