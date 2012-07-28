@@ -25,7 +25,7 @@
     <td><%= space.desc %></td>
     <td><%= space.capacity %></td>
     <td><%= space.price %></td>
-    <td><%= space.img_url %></td>
+    <td><img width="100px" src="<%= image_path space.img_url %>"/></td>
     <td><%= space.availability %></td>
     <td><%= link_to 'Show', space %></td>
     <td><%= link_to 'Edit', edit_space_path(space) %></td>
