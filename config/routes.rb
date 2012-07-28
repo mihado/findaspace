@@ -1,7 +1,9 @@
 Findaspace::Application.routes.draw do
   get "home/index"
 
-  resources :spaces
+  resources :spaces do 
+    post :search, on: :collection
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
