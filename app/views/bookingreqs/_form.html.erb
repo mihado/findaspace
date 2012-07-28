@@ -1,4 +1,5 @@
-<%= form_for(@bookingreq) do |f| %>
+<%= form_for(@bookingreq, :url => space_bookingreqs_path(params[:space_id])) do |f| %>
+  <%= f.hidden_field :space_id %>
   <% if @bookingreq.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@bookingreq.errors.count, "error") %> prohibited this bookingreq from being saved:</h2>
@@ -16,12 +17,8 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :username %><br />
+    <%= f.label :username, 'User name' %><br />
     <%= f.text_field :username %>
-  </div>
-  <div class="field">
-    <%= f.label :space_id %><br />
-    <%= f.number_field :space_id %>
   </div>
   <div class="field">
     <%= f.label :start_time %><br />
