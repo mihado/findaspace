@@ -2,7 +2,11 @@ class SpacesController < ApplicationController
   # GET /spaces
   # GET /spaces.json
   def index
-    @spaces = Space.all
+    if params[:city]
+      @spaces = Space.where(:city => params[:city])
+    else
+      @spaces = Space.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb

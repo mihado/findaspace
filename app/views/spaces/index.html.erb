@@ -1,5 +1,32 @@
-<h1>Listing spaces</h1>
+<div id="" >
+    <h1>Listing all spaces</h1>
+    <table>
+        <% @spaces.each do |space| %>
+        <!-- <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" > -->
+        <tr>
+            <td>
+                <img height="100px" src="<%= image_path space.img_url %>"/>
+            </td>
+            <td class="list_description" >
+                <dl>
+                    <dt><%= space.name %></dt>
+                    <dd><%= space.desc %></dd>
+                    <!--<dd><%= truncate(strip_tags(space.desc), :length => 80) %></dd>-->
+                </dl>
+            </td>
+            <td class="" >
+                <%= link_to 'Show', space %><br/>
+                <%= link_to 'Edit', edit_space_path(space) %><br/>
+                <%= link_to 'Destroy', space,
+                :confirm => 'Are you sure?',
+                :method => :delete %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+</div>
 
+<!-- generated -->
 <table>
   <tr>
     <th>Name</th>
@@ -15,6 +42,7 @@
     <th></th>
     <th></th>
   </tr>
+  
 
 <% @spaces.each do |space| %>
   <tr>
@@ -25,7 +53,8 @@
     <td><%= space.desc %></td>
     <td><%= space.capacity %></td>
     <td><%= space.price %></td>
-    <td><%= space.img_url %></td>
+    <td><img src="<%= image_path space.img_url %>"/></td>
+    <!-- <%= image_tag(space.img_url) %> -->
     <td><%= space.availability %></td>
     <td><%= link_to 'Show', space %></td>
     <td><%= link_to 'Edit', edit_space_path(space) %></td>
@@ -33,6 +62,7 @@
   </tr>
 <% end %>
 </table>
+<!-- generated -->
 
 <br />
 
