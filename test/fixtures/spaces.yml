@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  address: MyString
+  suburb: MyString
+  city: MyString
+  desc: MyText
+  capacity: 1
+  price: 9.99
+  img_url: MyString
+  availability: false
+
+two:
+  name: MyString
+  address: MyString
+  suburb: MyString
+  city: MyString
+  desc: MyText
+  capacity: 1
+  price: 9.99
+  img_url: MyString
+  availability: false
