@@ -11,4 +11,11 @@ class Space < ActiveRecord::Base
 
 	validates 	:price, :numericality => {:greater_than_or_equal_to => 0.01}
 	validates	:capacity, :numericality => {:greater_than_or_equal_to => 1}
+
+  def capacity_range
+    @capacity_range
+  end
+  def capacity_range= new_range
+    @capacity_range = new_range
+  end
 end

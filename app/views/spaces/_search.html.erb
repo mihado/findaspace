@@ -1,0 +1,13 @@
+<div class='search'>
+  Search for a space
+  <% @search_space ||= Space.new %>
+  <%= form_for @search_space, :url => [:search, :spaces] do |f| %>
+    <div class='field'>
+      <%= select_city_for_space(f) %>
+    </div>
+    <div class='field'>
+      <%= select_capacity_of_space(f) %>
+    </div>
+    <%= f.submit :search %>
+  <% end %>
+</div>

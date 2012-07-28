@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-<div id="" >
-    <h1>Listing all spaces</h1>
-    <table>
-        <% @spaces.each do |space| %>
-        <!-- <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" > -->
-        <tr>
-=======
 <div id="space_list" >
     <h1>Listing all spaces</h1>
+    <%= render 'spaces/search' %>
     <table>
         <% @spaces.each do |space| %>
         <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
->>>>>>> exp
             <td>
                 <img height="100px" src="<%= image_path space.img_url %>"/>
             </td>
@@ -26,7 +18,7 @@
                 <%= link_to 'Show', space %><br/>
                 <%= link_to 'Edit', edit_space_path(space) %><br/>
                 <%= link_to 'Destroy', space,
-                :confirm => 'Are you sure?',
+                  :data => {:confirm => 'Are you sure?'},
                 :method => :delete %>
             </td>
         </tr>
@@ -34,12 +26,10 @@
     </table>
 </div>
 
-<<<<<<< HEAD
-=======
 <br />
 <br />
 <br />
->>>>>>> exp
+
 <!-- generated -->
 <table>
   <tr>

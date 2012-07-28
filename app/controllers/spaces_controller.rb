@@ -2,14 +2,37 @@ class SpacesController < ApplicationController
   # GET /spaces
   # GET /spaces.json
   def index
-    if params[:city]
-      @spaces = Space.where(:city => params[:city])
+    @spaces = Space.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @spaces }
+    end
+  end
+
+  def search
+    @search_space = Space.new
+
+    if params[:space]
+      @spaces = Space
+      if city = params[:space][:city]
+        @spaces = @spaces.where(:city => city)
+        @search_space.city = city
+      end
+
+      if capacity_range = params[:space][:capacity_range]
+        @search_space.capacity_range = capacity_range
+        min_capacity, max_capacity = capacity_range.split('-')
+        if min_capacity && max_capacity 
+          @spaces = @spaces.where("capacity >= ? AND capacity <= ?", min_capacity, max_capacity)
+        end
+      end
     else
       @spaces = Space.all
     end
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render :index }
       format.json { render json: @spaces }
     end
   end
