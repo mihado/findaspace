@@ -1,4 +1,6 @@
 class SpacesController < ApplicationController
+  before_filter :authenticate_admin!, :except => [:index, :search]
+
   # GET /spaces
   # GET /spaces.json
   def index
