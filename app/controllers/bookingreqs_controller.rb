@@ -25,6 +25,7 @@ class BookingreqsController < ApplicationController
   # GET /bookingreqs/new.json
   def new
     @bookingreq = Bookingreq.new
+    @bookingreq.space_id = params[:space_id]
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,10 +42,11 @@ class BookingreqsController < ApplicationController
   # POST /bookingreqs.json
   def create
     @bookingreq = Bookingreq.new(params[:bookingreq])
+    @bookingreq.space_id = params[:space_id]
 
     respond_to do |format|
       if @bookingreq.save
-        format.html { redirect_to @bookingreq, notice: 'Bookingreq was successfully created.' }
+        format.html { redirect_to space_path(@bookingreq.space), notice: 'Booking was successfully created.' }
         format.json { render json: @bookingreq, status: :created, location: @bookingreq }
       else
         format.html { render action: "new" }
