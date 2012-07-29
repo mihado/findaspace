@@ -10,7 +10,7 @@ class Space < ActiveRecord::Base
 				:price,
 				:img_url, :presence => true
 
-	validates 	:price, :numericality => {:greater_than_or_equal_to => 0.01}
+	validates 	:price, :numericality => {:greater_than_or_equal_to => 0}
 	validates	:capacity, :numericality => {:greater_than_or_equal_to => 1}
 
   def capacity_range

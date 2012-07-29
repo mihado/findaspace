@@ -1,11 +1,15 @@
 /*body {
 background-position-y: -257px;
-background-image: url('bizdojo.jpg');
+background-image: url('bizdojo_blur.jpg');
 }*/
 
+.row-fluid [class*="span"] {
+margin-left:0;
+margin-bottom: 20px;
+}
+
 #space_city, #space_capacity_range{
-position: absolute;
-width: 240px;
+/*position: absolute;*/
 padding-left: 10px;
 top: 0;
 border: none;
@@ -14,25 +18,74 @@ background-color: transparent;
 outline: none;
 margin: 2px;
 }
+#space_capacity_range{
+width: 220px;
+}
+#space_city {
+width: 220px;
+}
 
 
 
-#locationfield select, #capacityfield select {
+#locationfield select, #capacityfield select, #datepicker select{
 font-size: 16px;
 color: black;
 }
+#timefield input{
+font-size: 16px;
+color: black;
+padding: 5px;
+width: 75px;
+}
+.timetitle {
+  width: 145px;
+padding: 7px 0 0 20px;
+font-size: 16px;
+color: #666;
+margin-right: 20px;
+display: block;
+line-height: 18px;
 
-#space_city option, #space_capacity_range option{
+}
+
+#datefield input{
+font-size: 16px;
+color: black;
+border: none;
+position: absolute;
+padding-left: 10px;
+top: 0;
+border: none;
+border-collapse: collapse;
+background-color: transparent;
+outline: none;
+margin: 9px 0 0 0;
+}
+#space_city option, #space_capacity_range option, #datepicker option {
 font-size: 14px;
 padding: 4px 0 0 0;
 color: black;
 }
 
-#locationfield label, #space_capacity_range label {
+#locationfield label {
 width: 55px;
 padding: 7px 0 0 10px;
 font-size: 16px;
 color: #666;
+margin-right: 20px;
+}
+#capacityfield label {
+width: 80px;
+padding: 7px 0 0 10px;
+font-size: 16px;
+color: #666;
+}
+#datefield label {
+width: 40px;
+padding: 7px 0 0 10px;
+font-size: 16px;
+color: #666;
+margin-right: 36px;
 }
 
 #locationfield {
@@ -52,6 +105,28 @@ height: 32px;
 overflow: visible;
 position: relative;
 }
+
+#datefield{
+background-color: white;
+display: block;
+width: 320px;
+height: 32px;
+overflow: visible;
+position: relative;
+}
+.datepicker {
+top: 32px;
+left: 100px;
+}
+#timefield{
+background-color: white;
+display: block;
+width: 320px;
+height: 90px;
+overflow: visible;
+position: relative;
+}
+
 
 .hero-unit {
 background-color: transparent; 

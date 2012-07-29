@@ -4,32 +4,35 @@
         <% @spaces.each do |space| %>
         <tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
             <td>
-                <img height="100px" src="<%= image_path space.img_url %>"/>
+                <img width="100px" src="<%= image_path space.img_url %>"/>
             </td>
             <td class="list_description" >
                 <dl>
-                    <dt><%= space.name %></dt>
-                    <dd><%= space.desc %></dd>
-                    <!--<dd><%= truncate(strip_tags(space.desc), :length => 80) %></dd>-->
+                    <dt><%= space.name %> - <%= space.address %>, <%= space.suburb %>, <%= space.city %></dt>
+                    <dd>
+                        Capacity: <%= space.capacity %><br />
+                        Price: $<%= space.price %>/hr<br />
+                        Description: <%= space.desc %><br /><br />
+                        <b><%= link_to 'Booking Request', new_space_bookingreq_path(space) %></b>
+                    </dd>
                 </dl>
             </td>
             <td class="" >
+                <% if admin_signed_in? %>
                 <%= link_to 'Show', space %><br/>
                 <%= link_to 'Edit', edit_space_path(space) %><br/>
                 <%= link_to 'Destroy', space,
-                  :data => {:confirm => 'Are you sure?'},
+                :data => {:confirm => 'Are you sure?'},
                 :method => :delete %>
+                <% end %>
             </td>
         </tr>
         <% end %>
     </table>
 </div>
 
-<br />
-<br />
-<br />
-
 <!-- generated -->
+<!--
 <table>
   <tr>
     <th>Name</th>
@@ -44,11 +47,11 @@
     <th></th>
     <th></th>
     <th></th>
-  </tr>
-  
+</tr>
+
 
 <% @spaces.each do |space| %>
-  <tr>
+<tr>
     <td><%= space.name %></td>
     <td><%= space.address %></td>
     <td><%= space.suburb %></td>
@@ -60,20 +63,21 @@
     <td><%= space.availability %></td>
     <td>
       <%= link_to 'Booking Request', new_space_bookingreq_path(space) %>
-    </td>
-    <% if admin_signed_in? %>
-      <td><%= link_to 'Show', space %></td>
-      <td><%= link_to 'Edit', edit_space_path(space) %></td>
-      <td><%= link_to 'Destroy', space, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <% end %>
-  </tr>
+  </td>
+  <% if admin_signed_in? %>
+  <td><%= link_to 'Show', space %></td>
+  <td><%= link_to 'Edit', edit_space_path(space) %></td>
+  <td><%= link_to 'Destroy', space, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+</tr>
 <% end %>
 </table>
+-->
 <!-- generated -->
 
 <br />
 
 <% if admin_signed_in? %>
-  <%= link_to 'New Space', new_space_path %>
+<%= link_to 'New Space', new_space_path %>
 <% end %>
 

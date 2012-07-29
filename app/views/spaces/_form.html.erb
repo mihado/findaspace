@@ -1,53 +1,63 @@
 <%= form_for(@space) do |f| %>
-  <% if @space.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@space.errors.count, "error") %> prohibited this space from being saved:</h2>
+<% if @space.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@space.errors.count, "error") %> prohibited this space from being saved:</h2>
 
-      <ul>
-      <% @space.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% @space.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :suburb %><br />
-    <%= f.text_field :suburb %>
-  </div>
+<div class="field">
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+</div>
+<div class="field">
+  <%= f.label :address %><br />
+  <%= f.text_field :address %>
+</div>
+<div class="field">
+  <%= f.label :suburb %><br />
+  <%= f.text_field :suburb %>
+</div>
+
+<!--
+<div class="field">
+  <%= f.label :city %><br />
+  <%= f.text_field :city %>
+</div>
+-->
+
   <div class="field">
     <%= f.label :city %><br />
     <%= select_city_for_space(f) %>
   </div>
-  <div class="field">
-    <%= f.label :desc %><br />
-    <%= f.text_area :desc %>
-  </div>
-  <div class="field">
-    <%= f.label :capacity %><br />
-    <%= f.number_field :capacity %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :img_url %><br />
-    <%= f.text_field :img_url %>
-  </div>
-  <div class="field">
-    <%= f.label :availability %><br />
-    <%= f.check_box :availability %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+
+<div class="field">
+  <%= f.label :desc %><br />
+  <%= f.text_area :desc %>
+</div>
+<div class="field">
+  <%= f.label :capacity %><br />
+  <%= f.number_field :capacity %>
+</div>
+<div class="field">
+  <%= f.label :price %><br />
+  <%= f.text_field :price %>
+</div>
+<div class="field">
+  <%= f.label :img_url %><br />
+  <%= f.text_field :img_url %>
+</div>
+<div class="field">
+  <%= f.label :availability %><br />
+  <%= f.check_box :availability %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>
